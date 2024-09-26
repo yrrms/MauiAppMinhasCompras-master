@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppMinhasCompras.Views.NovoProduto"
+             Title="Novo Produto">
+
+    <!-- itens da barra de ferramentas para a página -->
+    <ContentPage.ToolbarItems>
+        <!-- Item para salvar o novo produto, que aciona o método ToolbarItem_Clicked quando clicado -->
+        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <!-- Layout vertical para empilhar os elementos na página, com espaçamento e padding -->
+    <VerticalStackLayout Spacing="10" Padding="10">
+        <!-- Rótulo para a descrição do produto -->
+        <Label Text="Descrição do Produto:" />
+        <!-- Campo de entrada para a descrição do produto -->
+        <Entry x:Name="txt_descricao" />
+
+        <!-- Rótulo para a quantidade do produto -->
+        <Label Text="Quantidade:" />
+        <!-- Campo de entrada para a quantidade, com teclado numérico -->
+        <Entry x:Name="txt_quantidade" Keyboard="Numeric" />
+
+        <!-- Rótulo para o preço unitário do produto -->
+        <Label Text="Preço Unitário:" />
+        <!-- Campo de entrada para o preço, com teclado numérico -->
+        <Entry x:Name="txt_preco" Keyboard="Numeric" />
+    </VerticalStackLayout>
+</ContentPage>
+
